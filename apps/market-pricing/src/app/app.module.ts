@@ -3,22 +3,18 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '@workshop/material';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
-import { StadiumsModule } from './stadiums/stadiums.module';
-import { MlbCardsModule } from './mlb-cards/mlb-cards.module';
-import { HomeModule } from './home/home.module';
+
+import { AppRoutingModule } from './app-routing.module';
+import { UiLoginModule } from '@workshop/ui-login';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled'}),
     BrowserAnimationsModule,
     MaterialModule,
-    StadiumsModule,
-    HomeModule,
-    MlbCardsModule
-
+    UiLoginModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

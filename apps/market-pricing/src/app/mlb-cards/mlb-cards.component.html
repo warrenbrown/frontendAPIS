@@ -1,3 +1,39 @@
-<p>
-  mlb-cards works!
-</p>
+<div class="list-container">
+  <h1 class="header">Current Customers</h1>
+
+  <table mat-table class="full-width-table mat-elevation-z1" aria-label="Customers">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef>Phone</th>
+      <td mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell></td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef>Status</th>
+      <td mat-cell></td>
+    </ng-container>
+
+    <tr mat-header-row></tr>
+    <tr mat-row></tr>
+  </table>
+</div>

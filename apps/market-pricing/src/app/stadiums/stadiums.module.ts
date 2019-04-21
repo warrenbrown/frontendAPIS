@@ -9,7 +9,8 @@ import { MaterialModule } from '@workshop/material';
   declarations: [StadiumsComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    StadiumsRoutingModule
   ],
   exports: [
     StadiumsComponent

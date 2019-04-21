@@ -1,0 +1,53 @@
+<div class="container">
+  <!-- STADIUMS LIST -->
+  <div class="col-50">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1>STADIUMS</h1>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let stadium of stadiums"
+            (click)="selectStadium(stadium)">
+            <h3 mat-line>
+              <!-- STADIUM DETAILS -->
+              {{stadium.name}}
+            </h3>
+            <p mat-line>
+              <!-- STADIUM DETAILS -->
+              {{stadium.rarity}}
+            </p>
+            <button mat-icon-button>
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!-- STADIUM DETAILS -->
+  <div class="col-50">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1>
+            <!-- STADIUM TITLE HERE -->
+             <span *ngIf="selectedStadium; else elseBlock">{{selectedStadium.name}}</span>
+             <ng-template #elseBlock>Select a Stadium</ng-template>
+          </h1>
+        </mat-card-title>
+      </mat-card-header>
+      <form>
+        <mat-card-content>
+          <!-- STADIUM FORM HERE -->
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="submit" mat-button color="primary">Save</button>
+          <button type="button" mat-button (click)="cancel()">Cancel</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>

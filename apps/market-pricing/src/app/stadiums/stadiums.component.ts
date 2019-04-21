@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StadiumsService, Stadium } from '@workshop/core-data';
 
 @Component({
   selector: 'app-stadiums',
@@ -6,29 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stadiums.component.css']
 })
 export class StadiumsComponent implements OnInit {
-  selectedStadium;
-  stadiums = [
-    {
-      "name": "Highland Park",
-      "rarity": "Bronze",
-      "team": "Free Agents",
-    },
-    {
-      "name": "Hubert H. Humphrey Metrodome",
-      "rarity": "Diamond",
-      "team": "Free Agents",
-    },
-    {
-      "name": "Industry Center Stadium",
-      "rarity": "Bronze",
-      "team": "Free Agents",
-    }
-  ]
-  constructor() { }
+  stadiums: Stadium[];
+  selectedStadium: Stadium;
+  constructor(private stadiumService: StadiumsService) { }
 
   selectStadium(stadium) {
     this.selectedStadium = stadium;
     console.log('SELECTED STADIUM', stadium)
+  }
+
+  getStadiums() {
+    this.stadiums = this.stadiumService.all();
   }
 
   cancel() {
@@ -36,6 +25,7 @@ export class StadiumsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getStadiums();
   }
 
 }

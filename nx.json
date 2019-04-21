@@ -25,6 +25,12 @@
     },
     "ui-toolbar": {
       "tags": []
+    },
+    "market-pricing": {
+      "tags": []
+    },
+    "market-pricing-e2e": {
+      "tags": []
     }
   }
 }

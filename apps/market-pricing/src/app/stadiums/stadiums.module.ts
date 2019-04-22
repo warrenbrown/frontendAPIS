@@ -5,9 +5,11 @@ import { StadiumsRoutingModule } from './stadiums-routing.module';
 import { StadiumsComponent } from './stadiums.component';
 import { MaterialModule } from '@workshop/material';
 import { FormsModule } from '@angular/forms';
+import { StadiumsListComponent } from './stadiums-list/stadiums-list.component';
+import { StadiumDetailComponent } from './stadium-detail/stadium-detail.component';
 
 @NgModule({
-  declarations: [StadiumsComponent],
+  declarations: [StadiumsComponent, StadiumsListComponent, StadiumDetailComponent],
   imports: [
     CommonModule,
     MaterialModule,

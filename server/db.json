@@ -9,7 +9,7 @@
     {
       "id": "15",
       "name": "Crystal Falls Stadium",
-      "rarity": "bronze",
+      "rarity": "silver",
       "team": "Free Agents"
     },
     {
@@ -25,34 +25,10 @@
       "team": "Rangers"
     },
     {
-      "id": "21",
-      "name": "Great American Ball Park&trade;",
-      "rarity": "silver",
-      "team": "Reds"
-    },
-    {
-      "id": "22",
-      "name": "Green Valley Stadium",
-      "rarity": "bronze",
-      "team": "Free Agents"
-    },
-    {
-      "id": "23",
-      "name": "Griffith Stadium",
-      "rarity": "diamond",
-      "team": "Free Agents"
-    },
-    {
-      "id": "24",
-      "name": "Guaranteed Rate Field&trade;",
-      "rarity": "silver",
-      "team": "White Sox"
-    },
-    {
-      "id": "25",
-      "name": "Highland Park",
-      "rarity": "bronze",
-      "team": "Free Agents"
+      "id": "y2KWBlH",
+      "name": "Fenway Park",
+      "rarity": "gold",
+      "team": "Red Sox"
     }
   ]
 }

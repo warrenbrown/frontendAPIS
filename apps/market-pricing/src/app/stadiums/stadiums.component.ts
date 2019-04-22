@@ -34,12 +34,34 @@ export class StadiumsComponent implements OnInit {
   }
 
   saveStadium(stadium) {
+    if(!stadium.id) {
+      this.createStadium(stadium)
+    } else {
+      this.updateStadium(stadium);
+    }
+  }
+
+
+  createStadium(stadium) {
     this.stadiumService.create(stadium)
+      .subscribe(result => {
+      this.getStadiums();
+      this.resetStadium();
+    });
+  }
+
+  updateStadium(stadium) {
+    this.stadiumService.update(stadium)
+      .subscribe(result => {
+        this.getStadiums();
+        this.resetStadium();
+      });
   }
 
   deleteStadium(stadium) {
-    this.stadiumService.delete(stadium.id)
-      .subscribe(result => this.getStadiums());
+    console.log('DELETE STADIUM', stadium);
+    // this.stadiumService.delete(stadium.id)
+    //   .subscribe(result => this.getStadiums());
   }
 
   cancel() {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StadiumsService, Stadium } from '@workshop/core-data';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-stadiums',
@@ -7,8 +8,10 @@ import { StadiumsService, Stadium } from '@workshop/core-data';
   styleUrls: ['./stadiums.component.css']
 })
 export class StadiumsComponent implements OnInit {
-  stadiums: Stadium[];
+  stadiums$;
   selectedStadium: Stadium;
+
+
   constructor(private stadiumService: StadiumsService) { }
 
   selectStadium(stadium) {
@@ -16,16 +19,36 @@ export class StadiumsComponent implements OnInit {
     console.log('SELECTED STADIUM', stadium)
   }
 
+  resetStadium() {
+    const emptyStadium: Stadium = {
+      id: null,
+      name: "",
+      rarity: "",
+      team: ""
+    }
+    this.selectStadium(emptyStadium)
+  }
+
   getStadiums() {
-    this.stadiums = this.stadiumService.all();
+    this.stadiums$ = this.stadiumService.all();
+  }
+
+  saveStadium(stadium) {
+    this.stadiumService.create(stadium)
+  }
+
+  deleteStadium(stadium) {
+    this.stadiumService.delete(stadium.id)
+      .subscribe(result => this.getStadiums());
   }
 
   cancel() {
-    this.selectStadium(null);
+    this.resetStadium();
   }
 
   ngOnInit() {
     this.getStadiums();
+    this.resetStadium()
   }
 
 }

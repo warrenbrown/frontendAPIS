@@ -1,0 +1,58 @@
+{
+  "stadiums": [
+    {
+      "id": "1",
+      "name": "Refugio All American Park",
+      "rarity": "bronze",
+      "team": "Free Agents"
+    },
+    {
+      "id": "15",
+      "name": "Crystal Falls Stadium",
+      "rarity": "bronze",
+      "team": "Free Agents"
+    },
+    {
+      "id": "18",
+      "name": "Forbes Field",
+      "rarity": "diamond",
+      "team": "Free Agents"
+    },
+    {
+      "id": "20",
+      "name": "Globe Life Park in Arlington&trade;",
+      "rarity": "silver",
+      "team": "Rangers"
+    },
+    {
+      "id": "21",
+      "name": "Great American Ball Park&trade;",
+      "rarity": "silver",
+      "team": "Reds"
+    },
+    {
+      "id": "22",
+      "name": "Green Valley Stadium",
+      "rarity": "bronze",
+      "team": "Free Agents"
+    },
+    {
+      "id": "23",
+      "name": "Griffith Stadium",
+      "rarity": "diamond",
+      "team": "Free Agents"
+    },
+    {
+      "id": "24",
+      "name": "Guaranteed Rate Field&trade;",
+      "rarity": "silver",
+      "team": "White Sox"
+    },
+    {
+      "id": "25",
+      "name": "Highland Park",
+      "rarity": "bronze",
+      "team": "Free Agents"
+    }
+  ]
+}

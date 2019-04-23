@@ -1,12 +1,17 @@
 <div class="container">
   <!-- STADIUMS LIST -->
   <div class="col-50">
-    <app-stadiums-list [stadiums]="stadiums$ | async"
+    <app-stadiums-list
+      [stadiums]="stadiums$ | async"
       (selected)="selectStadium($event)"
       (deleted)="deleteStadium($event)"></app-stadiums-list>
   </div>
   <!-- STADIUM DETAILS -->
   <div class="col-50">
-    <app-stadium-detail></app-stadium-detail>
+    <app-stadium-detail
+    [stadium]="selectedStadium"
+    (saved)="saveStadium($event)"
+    (cancelled)="cancel($event)">
+  </app-stadium-detail>
   </div>
 </div>

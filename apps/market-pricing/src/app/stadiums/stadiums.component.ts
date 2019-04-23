@@ -16,7 +16,6 @@ export class StadiumsComponent implements OnInit {
 
   selectStadium(stadium) {
     this.selectedStadium = stadium;
-    console.log('SELECTED STADIUM', stadium)
   }
 
   resetStadium() {

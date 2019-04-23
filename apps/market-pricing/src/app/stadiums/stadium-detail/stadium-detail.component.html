@@ -1,1 +1,29 @@
-<h1>Stadium Details Works</h1>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h1>
+        <!-- STADIUM TITLE HERE -->
+        <span *ngIf="currentStadium.id; else elseBlock">{{originalName}}</span>
+        <ng-template #elseBlock>Select a Stadium</ng-template>
+      </h1>
+    </mat-card-title>
+  </mat-card-header>
+  <form (submit)="saved.emit(currentStadium)">
+    <mat-card-content>
+      <!-- STADIUM FORM HERE -->
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Name" [(ngModel)]="currentStadium.name" type="text" name="name">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Rarity" [(ngModel)]="currentStadium.rarity" type="text" name="rarity">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Team" [(ngModel)]="currentStadium.team" type="text" name="team">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" mat-button color="primary">Save</button>
+      <button type="button" mat-button (click)="cancelled.emit(currentStadium)">Cancel</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

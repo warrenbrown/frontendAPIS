@@ -29,6 +29,12 @@
       "name": "Fenway Park",
       "rarity": "gold",
       "team": "Red Sox"
+    },
+    {
+      "id": "FhkrpgR",
+      "name": "Eagles Stadium",
+      "rarity": "gold",
+      "team": "Woodsboro"
     }
   ]
 }

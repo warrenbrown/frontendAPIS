@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./stadiums.component.css']
 })
 export class StadiumsComponent implements OnInit {
+  primaryColor = 'red';
   stadiums$;
   selectedStadium: Stadium;
 

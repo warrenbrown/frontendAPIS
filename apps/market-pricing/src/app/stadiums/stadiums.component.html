@@ -1,6 +1,7 @@
 <div class="container">
   <!-- STADIUMS LIST -->
   <div class="col-50">
+    <h1>{{primaryColor}}</h1>
     <app-stadiums-list
       [stadiums]="stadiums$ | async"
       (selected)="selectStadium($event)"
